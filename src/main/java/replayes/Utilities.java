@@ -99,11 +99,11 @@ public class Utilities {
         quantities.setFirst(res1);
         quantities.setSecond(res2);
         quantities.setThird(res3);
-        general.setQuantities(quantities);
 
         information.setDate(date);
         information.setVersion(version);
 
+        general.setQuantities(quantities);
         general.setInformation(information);
 
         subset.setGeneral(general);
