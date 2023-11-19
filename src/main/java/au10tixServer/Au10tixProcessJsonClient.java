@@ -12,7 +12,7 @@ public class Au10tixProcessJsonClient {
 
     public static void main(String[] args) {
         // Base URL for JSON process endpoint
-        String processUrl = "https://resttest10.herokuapp.com/api/process";
+        String processUrl = "https://web-media-weu-qa.azure-api.net/qatest/process";
 
         // Create a JSON payload
         String jsonPayload = createJsonPayload();
@@ -25,6 +25,8 @@ public class Au10tixProcessJsonClient {
     }
 
     private static String createJsonPayload() {
+
+
         // Constructing the JSON payload according to the specified requirements
         Map<String, Object> jsonMap = new HashMap<>();
         jsonMap.put("serial", 3);
@@ -38,13 +40,16 @@ public class Au10tixProcessJsonClient {
                 "version", "3.00"
         ));
 
-        // Assuming you have the higher values available, replace them with actual values
-//        generalMap.put("quantities", Map.of(
-//                "first",  /* Set to the higher value from the two JSON replies */,
-//                "second", /* Set to the higher value from the two JSON replies */,
-//                "third",  /* Set to the higher value from the two JSON replies */
-//                "fourth", "some_value"  // Add any other necessary fields
-//        ));
+        // Replace these values with the actual values from the two JSON replies
+        int higherFirst = 34/* Set to the higher value from the two JSON replies */;
+        int higherSecond = 3/* Set to the higher value from the two JSON replies */;
+        int higherThird = 19/* Set to the higher value from the two JSON replies */;
+
+        generalMap.put("quantities", Map.of(
+                "first", higherFirst,
+                "second", higherSecond,
+                "third", higherThird
+        ));
 
         subsetMap.put("general", generalMap);
         messageMap.put("subset", subsetMap);
