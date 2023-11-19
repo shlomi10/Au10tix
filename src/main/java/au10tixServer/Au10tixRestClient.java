@@ -1,8 +1,5 @@
 package au10tixServer;
 
-import com.google.gson.Gson;
-import okhttp3.*;
-import okhttp3.Response;
 import replayes.*;
 
 import java.io.IOException;
@@ -20,13 +17,6 @@ public class Au10tixRestClient {
     public static replayes.Response serial2;
     public static Utilities utilities;
 
-
-//    public static int serial;
-//    public static String date;
-//    public static String version;
-
-
-
     public static void initialize() {
         try {
             // load properties
@@ -40,9 +30,6 @@ public class Au10tixRestClient {
             serialId1 = props.getProperty("serialId1");
             serialId2 = props.getProperty("serialId2");
             processUrl = props.getProperty("processUrl");
-//            serial = Integer.parseInt(props.getProperty("serial"));
-//            date = props.getProperty("date");
-//            version = props.getProperty("version");
         } catch (Exception e) {
             System.out.println("There was problem load the properties file");
         }
