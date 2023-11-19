@@ -98,8 +98,6 @@ public class Au10tixRestClient {
     // build the request itself
     public static replayes.Response getAndBuildResponseObject(){
         int res1 , res2, res3;
-        System.out.println(serial1.getMessage().getSubset().getGeneral().getQuantities().getFirst());
-        System.out.println(serial2.getMessage().getSubset().getGeneral().getQuantities().getFirst());
         int firstSerial1 = serial1.getMessage().getSubset().getGeneral().getQuantities().getFirst();
         int firstSerial2 = serial2.getMessage().getSubset().getGeneral().getQuantities().getFirst();
         int secondSerial1 = serial1.getMessage().getSubset().getGeneral().getQuantities().getSecond();
